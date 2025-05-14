@@ -37,7 +37,7 @@ nav {
 }
 
 .nav li a:hover {
-  background-color: brown;
+  background-color: rgb(165, 42, 42);
   color: white;
 }
 
@@ -74,7 +74,7 @@ section p {
 }
 
 section:hover {
-  background-color: #5a5a5a;
+  background-color: #5a5a5aa6;
   color: white;
 }
 

@@ -104,7 +104,34 @@ a {
   background-color: #5a5a5a91;
   color: white;
 }
+.end-1 {
+      width: 100%;
+      overflow: hidden;
+      background-color: #2222228c;
+      color: white;
+      padding: 10px 0;
+      border-radius: 10px;
+      direction: rtl;
+      position: relative;
+    }
 
+    .end-2 {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 20px;
+      font-weight: bold;
+      animation: scroll-text 13s linear infinite;
+      padding-right: 27%;
+    }
+
+    @keyframes scroll-text {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   .gtd {

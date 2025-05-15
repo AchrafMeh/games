@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to right, blue, red);
+  background: linear-gradient(to right, rgb(255, 70, 70), hsl(229, 100%, 67%));
 }
 
 h1, h2 {
@@ -51,7 +51,7 @@ nav {
 }
 
 section {
-  background-color: hsla(0, 0%, 100%, 0.767);
+  background-color: hsla(0, 0%, 100%, 0.637);
   width: 100%;
   text-align: center;
   padding: 20px;
@@ -101,7 +101,7 @@ a {
   transition: 0.3s;
 }
 .top-button:hover{
-  background-color: #5a5a5a91;
+background-color: #2424249f;
   color: white;
 }
 .end-1 {

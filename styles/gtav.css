@@ -1,1 +1,104 @@
+body{
+    background: linear-gradient(to bottom , rgb(145, 145, 145) , rgb(151, 151, 151));
+}
+h1 , h3{
+    font-family: Hekaya;
+    margin-right: 100px;
+    color: #3f3f3f;
+}
+.story{
+    font-size:larger;
+    font-family: Hekaya;
+    font-weight:lighter;
+}
+p{
+    font-family: Hekaya;
+    font-size: larger;
+    font-weight: lighter;
+    margin-right: 100px;
+}
+.link{
+    background-color: rgba(212, 212, 212, 0.671);
+    margin-top: -400px;
+}
+.gall{
+    text-align: right;
+    margin-right: 100px;
+}
+.link{
+    text-align: left;
+    padding: 10px 25px;
+    width: 200px;
+    height: 160px;
+    border-radius: 10px;
+    margin-left: 125px;
+}
+.h3{
+    margin-top: 250px;
+    margin-right: 100px;
+}
+li{
+    font-family: Hekaya;
+}
+hr{
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #333, transparent);
+}
+button{
+    padding: 9px;
+    margin-left: 24px;
+    background-color: rgb(101, 216, 107);
+    border-radius: 10px;
+    width: 150px;
+    height: auto;
+    font-family: Hekaya;
+    font-size: x-large;
+    font-weight: bold;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: rgba(94, 94, 94, 0.555);
+    color: white;
+}
+.reqs{
+    background-color: rgba(94, 94, 94, 0.555);
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 20PX;
+}
+.req{
+    margin-left: 75px;
+}
+@font-face {
+    font-family: Hekaya;
+    src: url(../FFHekaya-Light.otf);
+}
+.end-1 {
+      width: 100%;
+      overflow: hidden;
+      background-color: #2222228c;
+      color: white;
+      padding: 10px 0;
+      border-radius: 10px;
+      direction: rtl;
+      position: relative;
+    }
 
+    .end-2 {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 20px;
+      font-weight: bold;
+      animation: scroll-text 13s linear infinite;
+      padding-right: 27%;
+    }
+
+    @keyframes scroll-text {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }

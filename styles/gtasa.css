@@ -31,7 +31,7 @@ p{
     width: 200px;
     height: 160px;
     border-radius: 10px;
-    margin-left: 125px;
+    margin-left: 50px;
 }
 .h3{
     margin-top: 150px;
@@ -80,7 +80,7 @@ section img{
     transition: 0.2s;
 }
 section img:hover{
-    transform:scale(3.0);
+    transform:scale(2.5);
 }
 .end-1 {
       width: 100%;
@@ -112,7 +112,6 @@ section img:hover{
     }
     @media (max-width:768px){
         .link{
-            grid-template-columns: 1fr;
             text-align: left;
             margin-top: 100px;
         }

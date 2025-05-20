@@ -1,15 +1,18 @@
 body {
-  background: linear-gradient(to right, rgb(255, 70, 70), hsl(229, 100%, 67%));
+   background-image:linear-gradient( rgba(212, 212, 212, 0.856) , rgba(0, 0, 0, 0.185)) , url(img/bg.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 h1, h2 {
-  color: white;
+  color: rgb(34, 34, 34);
   text-align: center;
 }
 
 /* ===== NAVIGATION ===== */
 nav {
-  background: linear-gradient(to right, green, yellow);
+  background: linear-gradient(to right, rgb(135, 189, 135), rgb(187, 116, 116));
   padding: 10px 0;
   border-radius: 5px;
   margin-bottom: 30px;

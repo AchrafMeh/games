@@ -1,10 +1,14 @@
 body{
-    background: linear-gradient(to bottom , rgb(145, 145, 145) , rgb(151, 151, 151));
+    background-image:linear-gradient( rgb(212, 212, 212) , rgba(0, 0, 0, 0.185)) , url(../img/bg.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 h1 , h3{
     font-family: Hekaya;
     margin-right: 100px;
     color: #3f3f3f;
+    border-bottom: blue;
 }
 .story{
     font-size:larger;
@@ -19,7 +23,7 @@ p{
 }
 .link{
     background-color: rgba(212, 212, 212, 0.671);
-    margin-top: -190px;
+    margin-top: -100px;
 }
 .gall{
     text-align: right;
@@ -34,7 +38,7 @@ p{
     margin-left: 50px;
 }
 .h3{
-    margin-top: 150px;
+    margin-top: 80px;
     margin-right: 100px;
 }
 li{
@@ -70,6 +74,19 @@ button:hover{
 .req{
     margin-left: 75px;
 }
+.logo{
+    text-decoration: none;
+}
+.logo img {
+    width: 5%;
+    margin-top: -60px;
+}
+.icon{
+    transition: filter 0.3s ease;
+}
+.icon:hover{
+    filter: brightness(0) invert(1);
+}
 @font-face {
     font-family: Hekaya;
     src: url(../FFHekaya-Light.otf);
@@ -96,7 +113,7 @@ button:hover{
     section img{
     width: 10%;
     gap: 20px;
-    transition: 0.2s;
+    transition: 0.2s ease;
     }
     section img:hover{
     transform:scale(2.5);
@@ -116,7 +133,9 @@ button:hover{
             margin-top: 100px;
         }
         section img{
-         width: 30%;
+        width: 30%;
+        }
+        .logo img{
+            width: 30px;
         }
     }
-    

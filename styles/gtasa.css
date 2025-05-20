@@ -1,5 +1,8 @@
 body{
-    background: linear-gradient(to bottom , rgb(145, 145, 145) , rgb(151, 151, 151));
+    background-image:linear-gradient( rgb(212, 212, 212) , rgba(0, 0, 0, 0.185)) , url(../img/bg.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 h1 , h3{
     font-family: Hekaya;
@@ -19,7 +22,7 @@ p{
 }
 .link{
     background-color: rgba(212, 212, 212, 0.671);
-    margin-top: -190px;
+    margin-top: -100px;
 }
 .gall{
     text-align: right;
@@ -101,7 +104,19 @@ section img:hover{
       animation: scroll-text 13s linear infinite;
       padding-right: 27%;
     }
-
+    .logo{
+    text-decoration: none;
+    }
+    .logo img {
+    width: 5%;
+    margin-top: -60px;
+   }
+    .icon{
+    transition: filter 0.3s ease;
+   }
+    .icon:hover{
+    filter: brightness(0) invert(1);
+   }
     @keyframes scroll-text {
       0% {
         transform: translateX(100%);
@@ -117,5 +132,8 @@ section img:hover{
         }
         section img{
             width: 30%;
+        }
+        .logo img{
+            width: 30px;
         }
     }

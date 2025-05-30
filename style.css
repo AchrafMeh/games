@@ -1,8 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
-   background-image:linear-gradient( rgba(212, 212, 212, 0.856) , rgba(0, 0, 0, 0.185)) , url(img/bg.jpg) ;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
+  background-image:linear-gradient( rgba(212, 212, 212, 0.856) , rgba(0, 0, 0, 0.185)) , url(img/bg.jpg) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 h1, h2 {
@@ -96,7 +99,7 @@ a {
   right: 20px;
   background-color: rgba(255, 152, 152, 0.623);
   padding: 10px 15px;
-  border-radius: 15px;
+  border-radius: 60px 60px;
   font-size: 18px;
   text-decoration: none;
   box-shadow: 10px 10px 10px black;

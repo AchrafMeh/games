@@ -1,0 +1,139 @@
+body{
+    background-image:linear-gradient( rgb(212, 212, 212) , rgba(0, 0, 0, 0.185)) , url(../img/bg.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+h1 , h3{
+    font-family: Hekaya;
+    margin-right: 100px;
+    color: #3f3f3f;
+}
+.story{
+    font-size:larger;
+    font-family: Hekaya;
+    font-weight:lighter;
+}
+p{
+    font-family: Hekaya;
+    font-size: larger;
+    font-weight: lighter;
+    margin-right: 100px;
+}
+.link{
+    background-color: rgba(212, 212, 212, 0.671);
+    margin-top: -100px;
+}
+.gall{
+    text-align: right;
+    margin-right: 100px;
+}
+.link{
+    text-align: left;
+    padding: 10px 25px;
+    width: 200px;
+    height: 160px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+.h3{
+    margin-top: 150px;
+    margin-right: 100px;
+}
+li{
+    font-family: Hekaya;
+}
+hr{
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #333, transparent);
+}
+button{
+    padding: 9px;
+    margin-left: 24px;
+    background-color: rgb(101, 216, 107);
+    border-radius: 10px;
+    width: 150px;
+    height: auto;
+    font-family: Hekaya;
+    font-size: x-large;
+    font-weight: bold;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: rgba(94, 94, 94, 0.555);
+    color: white;
+}
+.reqs{
+    background-color: rgba(94, 94, 94, 0.555);
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 20PX;
+}
+.req{
+    margin-left: 75px;
+}
+@font-face {
+    font-family: Hekaya;
+    src: url(../FFHekaya-Light.otf);
+}
+section img{
+    width: 10%;
+    gap: 20px;
+    transition: 0.2s;
+}
+section img:hover{
+    transform:scale(2.5);
+}
+.end-1 {
+      width: 100%;
+      overflow: hidden;
+      background-color: #2222228c;
+      color: white;
+      padding: 10px 0;
+      border-radius: 10px;
+      direction: rtl;
+      position: relative;
+    }
+
+    .end-2 {
+      display: inline-block;
+      white-space: nowrap;
+      font-size: 20px;
+      font-weight: bold;
+      animation: scroll-text 13s linear infinite;
+      padding-right: 27%;
+    }
+    .logo{
+    text-decoration: none;
+    }
+    .logo img {
+    width: 5%;
+    margin-top: -60px;
+   }
+    .icon{
+    transition: filter 0.3s ease;
+   }
+    .icon:hover{
+    filter: brightness(0) invert(1);
+   }
+    @keyframes scroll-text {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    @media (max-width:768px){
+        .link{
+            text-align: left;
+            margin-top: 100px;
+        }
+        section img{
+            width: 30%;
+        }
+        .logo img{
+            width: 30px;
+        }
+    }

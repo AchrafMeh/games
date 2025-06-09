@@ -43,7 +43,7 @@ nav {
 }
 
 .nav li a:hover {
-  background-color: rgb(165, 42, 42);
+  background-color: rgb(164, 45, 45);
   color: white;
 }
 
@@ -80,8 +80,9 @@ section p {
 }
 
 section:hover {
-  background-color: #5a5a5aa6;
-  color: white;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  border-color: white;
 }
 
 section img:hover {
@@ -107,7 +108,7 @@ a {
   transition: 0.3s;
 }
 .top-button:hover{
-background-color: #2424249f;
+  filter: contrast(400%);
   color: white;
 }
 .end-1 {
@@ -149,8 +150,13 @@ background-color: #2424249f;
     align-items: center;
   }
 
+  nav{
+    width: 50%;
+    margin-left: 100px;
+  }
+
   .nav li {
-    width: 100%;
+    width: 50%;
     text-align: center;
   }
 
@@ -161,5 +167,8 @@ background-color: #2424249f;
 
   section {
     width: 90%;
+  }
+  body{
+    background-size: cover;
   }
 }

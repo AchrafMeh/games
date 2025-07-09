@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Mehdaoui Games</title>
     <link rel="icon" href="image.png">
-    <script>
-  // تحويل تلقائي بعد ثانية (أو مباشرة)
-  window.location.href = "https://achrafmeh.github.io/login/";
+<script>
+  // إذا المستخدم ما دخلش من قبل ➜ نوجهه لصفحة تسجيل الدخول
+  if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "login.html";
+  }
 </script>
-
 </head>
 <body>
     <a id="up"></a>

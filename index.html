@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" >
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
@@ -12,123 +12,122 @@
     <link rel="stylesheet" href="style.css">
     <title>Mehdaoui Games</title>
     <link rel="icon" href="image.png">
-    <style>
-        .login-header {
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          padding: 10px 20px;
-          margin-bottom: 50px;
-          background: rgba(255, 255, 255, 0.8);
-          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-          gap: 10px;
-        }
+  <style>
+    
+    .login-header { display: flex; justify-content: flex-end; align-items: center; padding: 10px 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .login-btn, .logout-btn { padding: 6px 15px; border: none; border-radius: 6px; cursor: pointer; color: #fff; }
+    .login-btn { background-color: #4285F4; }
+    .logout-btn { background-color: #e74c3c; }
+    #user-info { display: flex; align-items: center; gap: 10px; }
+    #user-info img { border-radius: 50%; width: 35px; height: 35px; }
+   .comment-box {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  direction: rtl;
+}
 
-        .login-btn, .logout-btn {
-          padding: 6px 15px;
-          background-color: #4285F4;
-          color: white;
-          border: none;
-          border-radius: 8px;
-          cursor: pointer;
-        }
+.comment-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
 
-        .logout-btn {
-          background-color: #e74c3c;
-        }
+.comment-form img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
 
-        #user-info {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
+#comment-input {
+  flex: 1;
+  min-height: 80px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 15px;
+}
 
-        #user-info img {
-          border-radius: 50%;
-          width: 35px;
-          height: 35px;
-        }
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
 
-        .comment-box {
-          margin: 40px auto;
-          max-width: 700px;
-          padding: 20px;
-          background: #fff;
-          border-radius: 10px;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+.comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
 
-        .comment-form {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-        }
+.comment p {
+  background: #f7f7f7;
+  padding: 12px 16px;
+  border-radius: 10px;
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
 
-        .comment-form img {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-        }
+.star {
+  font-size: 32px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
 
-        #comment-input {
-          flex: 1;
-          min-height: 80px;
-          border: 1px solid #ccc;
-          border-radius: 8px;
-          padding: 10px;
-          resize: none;
-        }
+.star:hover,
+.star.selected {
+  color: #FFA500;
+}
 
-        #comment-list {
-          margin-top: 20px;
-        }
+#rating-result {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+footer {
+  background-color: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
 
-        .comment {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-          margin-bottom: 15px;
-        }
+footer a {
+  color: #66b2ff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-        .comment img {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-        }
+footer a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
 
-        .comment p {
-          background: #f1f1f1;
-          padding: 10px 15px;
-          border-radius: 10px;
-          max-width: 500px;
-        }
-
-        footer {
-          background-color: #222;
-          color: #ccc;
-          text-align: center;
-          padding: 20px;
-          margin-top: 50px;
-          font-size: 14px;
-        }
-
-        footer a {
-          color: #66aaff;
-          margin: 0 10px;
-        }
-    </style>
+  </style>
 </head>
 <body>
 
 <header class="login-header">
-  <div id="user-info" style="display: none;">
-    <img id="user-pic" src="" alt="User Pic">
+  <div id="user-info" style="display:none">
+    <img id="user-pic" src="" />
     <span id="user-name"></span>
-    <button onclick="signOut()" class="logout-btn">تسجيل الخروج</button>
+    <button class="logout-btn" onclick="signOut()">تسجيل الخروج</button>
   </div>
-  <button onclick="signInWithGoogle()" id="login-btn" class="login-btn">تسجيل الدخول بحساب Google</button>
+  <button id="login-btn" class="login-btn" onclick="signInWithGoogle()">تسجيل الدخول</button>
 </header>
-
 <a id="up"></a>
     <nav>
         <ul class="nav">
@@ -354,14 +353,26 @@
         <div class="end-2"><pre> هذا الموقع للالعاب عامة وخاصة العاب الكمبيوتر ومصمم من قبل مهداوي عبد المعز للتواصل يرجى الاتصال 0778082991</div>  
     </div>
 
-<section class="comment-box" id="comment-section" style="display: none;">
-  <h2>💬 التعليقات</h2>
+<section class="comment-box" id="comment-section" style="display:none;">
+  <h3>💬 التعليقات</h3>
   <div class="comment-form">
-    <img id="comment-user-pic" src="" alt="User" />
+    <img id="comment-user-pic" src="" />
     <textarea id="comment-input" placeholder="اكتب تعليقك..."></textarea>
-    <button onclick="postComment()">نشر التعليق</button>
+    <button onclick="postComment()">نشر</button>
   </div>
   <div id="comment-list"></div>
+</section>
+
+<section class="comment-box">
+  <h3>⭐ قيّم الموقع</h3>
+  <div style="text-align:center;">
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+  </div>
+  <p id="rating-result" style="text-align:center;margin-top:10px;"></p>
 </section>
 
 <footer>
@@ -373,8 +384,10 @@
   </p>
 </footer>
 
+<!-- Firebase Scripts -->
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 <script>
   const firebaseConfig = {
     apiKey: "AIzaSyAs3aGXpEZNXz_LKTxxKUJwXwox8vr_1Lc",
@@ -387,19 +400,19 @@
 
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
+  const db = firebase.firestore();
   const provider = new firebase.auth.GoogleAuthProvider();
 
   function signInWithGoogle() {
-    auth.signInWithPopup(provider)
-      .then((result) => {
-        const user = result.user;
-        document.getElementById("user-info").style.display = "flex";
-        document.getElementById("login-btn").style.display = "none";
-        document.getElementById("user-pic").src = user.photoURL;
-        document.getElementById("comment-user-pic").src = user.photoURL;
-        document.getElementById("user-name").textContent = user.displayName;
-        document.getElementById("comment-section").style.display = "block";
-      });
+    auth.signInWithPopup(provider).then(result => {
+      const user = result.user;
+      document.getElementById("user-info").style.display = "flex";
+      document.getElementById("login-btn").style.display = "none";
+      document.getElementById("user-pic").src = user.photoURL;
+      document.getElementById("user-name").textContent = user.displayName;
+      document.getElementById("comment-user-pic").src = user.photoURL;
+      document.getElementById("comment-section").style.display = "block";
+    });
   }
 
   function signOut() {
@@ -408,15 +421,16 @@
 
   function postComment() {
     const comment = document.getElementById("comment-input").value.trim();
-    if (comment) {
-      const commentDiv = document.createElement("div");
-      commentDiv.className = "comment";
-      commentDiv.innerHTML = `
-        <img src="${document.getElementById("comment-user-pic").src}" alt="user" />
-        <p>${comment}</p>
-      `;
-      document.getElementById("comment-list").prepend(commentDiv);
-      document.getElementById("comment-input").value = "";
+    const user = auth.currentUser;
+    if (comment && user) {
+      db.collection("comments").add({
+        name: user.displayName,
+        photo: user.photoURL,
+        text: comment,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(() => {
+        document.getElementById("comment-input").value = "";
+      });
     }
   }
 
@@ -425,11 +439,52 @@
       document.getElementById("user-info").style.display = "flex";
       document.getElementById("login-btn").style.display = "none";
       document.getElementById("user-pic").src = user.photoURL;
-      document.getElementById("comment-user-pic").src = user.photoURL;
       document.getElementById("user-name").textContent = user.displayName;
+      document.getElementById("comment-user-pic").src = user.photoURL;
       document.getElementById("comment-section").style.display = "block";
+
+      db.collection("comments").orderBy("timestamp", "desc").onSnapshot(snapshot => {
+        const commentList = document.getElementById("comment-list");
+        commentList.innerHTML = "";
+        snapshot.forEach(doc => {
+          const data = doc.data();
+          const div = document.createElement("div");
+          div.className = "comment";
+          div.innerHTML = `
+            <img src="${data.photo}" />
+            <p><strong>${data.name}</strong><br>${data.text}</p>
+          `;
+          commentList.appendChild(div);
+        });
+      });
+
+      db.collection("ratings").get().then(snapshot => {
+  let total = 0;
+  snapshot.forEach(doc => total += doc.data().value);
+  const avg = total / snapshot.size;
+  if (!isNaN(avg)) {
+    document.getElementById("rating-result").textContent =
+      `تقييم المستخدمين: ${avg.toFixed(1)} من 5 (${snapshot.size} صوت)`;
+  }
+});
+
     }
   });
+
+  document.querySelectorAll(".star").forEach(star => {
+    star.addEventListener("click", () => {
+      const rating = parseInt(star.dataset.value);
+      db.collection("ratings").add({
+        value: rating,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      document.getElementById("rating-result").textContent = `شكراً! قيّمت الموقع بـ ${rating} من 5.`;
+      document.querySelectorAll(".star").forEach(s => {
+        s.style.color = parseInt(s.dataset.value) <= rating ? "orange" : "gray";
+      });
+    });
+  });
 </script>
+
 </body>
 </html>

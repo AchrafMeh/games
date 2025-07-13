@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,123 @@
     <link rel="stylesheet" href="style.css">
     <title>Mehdaoui Games</title>
     <link rel="icon" href="image.png">
+    <style>
+        .login-header {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 10px 20px;
+          background: rgba(255, 255, 255, 0.8);
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+          gap: 10px;
+        }
+
+        .login-btn, .logout-btn {
+          padding: 6px 15px;
+          background-color: #4285F4;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+
+        .logout-btn {
+          background-color: #e74c3c;
+        }
+
+        #user-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        #user-info img {
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+        }
+
+        .comment-box {
+          margin: 40px auto;
+          max-width: 700px;
+          padding: 20px;
+          background: #fff;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .comment-form {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        .comment-form img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        #comment-input {
+          flex: 1;
+          min-height: 80px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 10px;
+          resize: none;
+        }
+
+        #comment-list {
+          margin-top: 20px;
+        }
+
+        .comment {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          margin-bottom: 15px;
+        }
+
+        .comment img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        .comment p {
+          background: #f1f1f1;
+          padding: 10px 15px;
+          border-radius: 10px;
+          max-width: 500px;
+        }
+
+        footer {
+          background-color: #222;
+          color: #ccc;
+          text-align: center;
+          padding: 20px;
+          margin-top: 50px;
+          font-size: 14px;
+        }
+
+        footer a {
+          color: #66aaff;
+          margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
-    <a id="up"></a>
+
+<header class="login-header">
+  <div id="user-info" style="display: none;">
+    <img id="user-pic" src="" alt="User Pic">
+    <span id="user-name"></span>
+    <button onclick="signOut()" class="logout-btn">تسجيل الخروج</button>
+  </div>
+  <button onclick="signInWithGoogle()" id="login-btn" class="login-btn">تسجيل الدخول بحساب Google</button>
+</header>
+
+<a id="up"></a>
     <nav>
         <ul class="nav">
             <li><a href="#gta games">Gta Games</a></li>
@@ -238,5 +352,83 @@
     <div class="end-1">
         <div class="end-2"><pre> هذا الموقع للالعاب عامة وخاصة العاب الكمبيوتر ومصمم من قبل مهداوي عبد المعز للتواصل يرجى الاتصال 0778082991</div>  
     </div>
+
+<section class="comment-box" id="comment-section" style="display: none;">
+  <h2>💬 التعليقات</h2>
+  <div class="comment-form">
+    <img id="comment-user-pic" src="" alt="User" />
+    <textarea id="comment-input" placeholder="اكتب تعليقك..."></textarea>
+    <button onclick="postComment()">نشر التعليق</button>
+  </div>
+  <div id="comment-list"></div>
+</section>
+
+<footer>
+  <p>© 2025 Mehdaoui Games | جميع الحقوق محفوظة.</p>
+  <p>
+    <a href="#">سياسة الخصوصية</a> |
+    <a href="mailto:mehdaoui.contact@gmail.com">اتصل بنا</a> |
+    <a href="https://facebook.com/achrafmeh" target="_blank">فيسبوك</a>
+  </p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAs3aGXpEZNXz_LKTxxKUJwXwox8vr_1Lc",
+    authDomain: "login-app-e78b2.firebaseapp.com",
+    projectId: "login-app-e78b2",
+    storageBucket: "login-app-e78b2.firebasestorage.app",
+    messagingSenderId: "383164019704",
+    appId: "1:383164019704:web:997defd1d82738a181dc0d"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  function signInWithGoogle() {
+    auth.signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user;
+        document.getElementById("user-info").style.display = "flex";
+        document.getElementById("login-btn").style.display = "none";
+        document.getElementById("user-pic").src = user.photoURL;
+        document.getElementById("comment-user-pic").src = user.photoURL;
+        document.getElementById("user-name").textContent = user.displayName;
+        document.getElementById("comment-section").style.display = "block";
+      });
+  }
+
+  function signOut() {
+    auth.signOut().then(() => location.reload());
+  }
+
+  function postComment() {
+    const comment = document.getElementById("comment-input").value.trim();
+    if (comment) {
+      const commentDiv = document.createElement("div");
+      commentDiv.className = "comment";
+      commentDiv.innerHTML = `
+        <img src="${document.getElementById("comment-user-pic").src}" alt="user" />
+        <p>${comment}</p>
+      `;
+      document.getElementById("comment-list").prepend(commentDiv);
+      document.getElementById("comment-input").value = "";
+    }
+  }
+
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      document.getElementById("user-info").style.display = "flex";
+      document.getElementById("login-btn").style.display = "none";
+      document.getElementById("user-pic").src = user.photoURL;
+      document.getElementById("comment-user-pic").src = user.photoURL;
+      document.getElementById("user-name").textContent = user.displayName;
+      document.getElementById("comment-section").style.display = "block";
+    }
+  });
+</script>
 </body>
 </html>

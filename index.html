@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Mehdaoui Games</title>
     <link rel="icon" href="image.png">
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9813683040376383"
-     crossorigin="anonymous"></script>
   <style>
     
     .login-header { display: flex; justify-content: flex-end; margin-bottom: 20px; align-items: center; padding: 10px 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -368,15 +366,26 @@ footer a:hover {
 
 <section class="comment-box">
   <h3>⭐ قيّم الموقع</h3>
-  <div style="text-align:center;">
-    <span class="star" data-value="1">★</span>
-    <span class="star" data-value="2">★</span>
-    <span class="star" data-value="3">★</span>
-    <span class="star" data-value="4">★</span>
-    <span class="star" data-value="5">★</span>
+  <div class="stars-container" style="text-align:center;">
+    <span class="star" data-value="1" tabindex="0" role="button" aria-label="تقييم 1 نجمة">
+      ★<br><span class="star-number">1</span>
+    </span>
+    <span class="star" data-value="2" tabindex="0" role="button" aria-label="تقييم 2 نجوم">
+      ★<br><span class="star-number">2</span>
+    </span>
+    <span class="star" data-value="3" tabindex="0" role="button" aria-label="تقييم 3 نجوم">
+      ★<br><span class="star-number">3</span>
+    </span>
+    <span class="star" data-value="4" tabindex="0" role="button" aria-label="تقييم 4 نجوم">
+      ★<br><span class="star-number">4</span>
+    </span>
+    <span class="star" data-value="5" tabindex="0" role="button" aria-label="تقييم 5 نجوم">
+      ★<br><span class="star-number">5</span>
+    </span>
   </div>
-  <p id="rating-result" style="text-align:center;margin-top:10px;"></p>
+  <p id="rating-result" style="margin-top:10px;"></p>
 </section>
+
 
 <footer>
   <p>© 2025 Mehdaoui Games | جميع الحقوق محفوظة.</p>
@@ -461,33 +470,166 @@ footer a:hover {
         });
       });
 
-      db.collection("ratings").get().then(snapshot => {
+     db.collection("ratings").get().then(snapshot => {
   let total = 0;
-  snapshot.forEach(doc => total += doc.data().value);
-  const avg = total / snapshot.size;
+  let count = 0;
+  snapshot.forEach(doc => {
+    total += doc.data().value;
+    count++;
+  });
+  const avg = total / count;
   if (!isNaN(avg)) {
     document.getElementById("rating-result").textContent =
-      `تقييم المستخدمين: ${avg.toFixed(1)} من 5 (${snapshot.size} صوت)`;
+      `تقييم المستخدمين: ${avg.toFixed(1)} من 5 (${count} صوت)`;
+    // عرض النجوم حسب المتوسط لو تحب (اختياري)
+    document.querySelectorAll(".star").forEach(star => {
+      star.style.color = parseInt(star.dataset.value) <= Math.round(avg) ? "orange" : "gray";
+    });
   }
 });
+
 
     }
   });
 
-  document.querySelectorAll(".star").forEach(star => {
-    star.addEventListener("click", () => {
-      const rating = parseInt(star.dataset.value);
-      db.collection("ratings").add({
-        value: rating,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-      });
+ document.querySelectorAll(".star").forEach(star => {
+  star.addEventListener("click", () => {
+    const rating = parseInt(star.dataset.value);
+    const user = auth.currentUser;
+    if (!user) {
+      alert("يرجى تسجيل الدخول لتقييم الموقع.");
+      return;
+    }
+    // نبحث إذا المستخدم صوّت قبل
+    const ratingRef = db.collection("ratings").doc(user.uid);
+    ratingRef.get().then(doc => {
+      if (doc.exists) {
+        // حدث التقييم
+        ratingRef.update({
+          value: rating,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+      } else {
+        // اضف تقييم جديد
+        ratingRef.set({
+          value: rating,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+      }
       document.getElementById("rating-result").textContent = `شكراً! قيّمت الموقع بـ ${rating} من 5.`;
       document.querySelectorAll(".star").forEach(s => {
         s.style.color = parseInt(s.dataset.value) <= rating ? "orange" : "gray";
       });
     });
   });
+});
+
 </script>
+
+<script>
+  const stars = document.querySelectorAll(".stars-container .star");
+  const ratingResult = document.getElementById("rating-result");
+  let currentRating = 0;
+  let userRatingDocId = null;
+  let currentUser = null;
+
+  // تلوين النجوم حسب التقييم
+  function highlightStars(rating) {
+    stars.forEach((star, idx) => {
+      if (idx < rating) {
+        star.classList.add("selected");
+        star.style.color = "#ffa500";
+      } else {
+        star.classList.remove("selected");
+        star.style.color = "gray";
+      }
+    });
+  }
+
+  stars.forEach((star, idx) => {
+    star.addEventListener("mouseover", () => {
+      highlightStars(idx + 1);
+    });
+    star.addEventListener("mouseout", () => {
+      highlightStars(currentRating);
+    });
+    star.addEventListener("click", async () => {
+      if (!currentUser) {
+        alert("يجب تسجيل الدخول أولاً.");
+        return;
+      }
+      const ratingValue = idx + 1;
+      try {
+        if (userRatingDocId) {
+          await db.collection("ratings").doc(userRatingDocId).update({
+            value: ratingValue,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+          });
+        } else {
+          const docRef = await db.collection("ratings").add({
+            userId: currentUser.uid,
+            value: ratingValue,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+          });
+          userRatingDocId = docRef.id;
+        }
+        currentRating = ratingValue;
+        highlightStars(currentRating);
+        updateRatingResult();
+      } catch (error) {
+        alert("حدث خطأ أثناء حفظ التقييم.");
+        console.error(error);
+      }
+    });
+    star.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        star.click();
+        e.preventDefault();
+      }
+    });
+  });
+
+  async function updateRatingResult() {
+    const snapshot = await db.collection("ratings").get();
+    if (snapshot.empty) {
+      ratingResult.textContent = "لم يقم أحد بتقييم الموقع بعد.";
+      return;
+    }
+    let total = 0;
+    snapshot.forEach(doc => total += doc.data().value);
+    const avg = total / snapshot.size;
+    let userText = currentUser ? `تقييمك: ${currentRating} من 5.` : "يرجى تسجيل الدخول لتقييم الموقع.";
+    ratingResult.textContent = `${userText} | متوسط تقييم المستخدمين: ${avg.toFixed(1)} من 5 (${snapshot.size} صوت)`;
+  }
+
+  async function loadUserRating(user) {
+    currentUser = user;
+    if (!user) {
+      currentRating = 0;
+      userRatingDocId = null;
+      highlightStars(0);
+      ratingResult.textContent = "يرجى تسجيل الدخول لتقييم الموقع.";
+      return;
+    }
+    const snapshot = await db.collection("ratings").where("userId", "==", user.uid).get();
+    if (!snapshot.empty) {
+      const doc = snapshot.docs[0];
+      userRatingDocId = doc.id;
+      currentRating = doc.data().value;
+      highlightStars(currentRating);
+    } else {
+      currentRating = 0;
+      userRatingDocId = null;
+      highlightStars(0);
+    }
+    updateRatingResult();
+  }
+
+  auth.onAuthStateChanged(user => {
+    loadUserRating(user);
+  });
+</script>
+
 
 </body>
 </html>

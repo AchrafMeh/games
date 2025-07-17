@@ -7,7 +7,7 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <meta name="description" content="موقع مهداوي عبد المعز لتحميل ألعاب الكمبيوتر مجانا مثل GTA و PES و Blur و Freefire. موقع خفيف وسريع بدون إعلانات مزعجة.">
-    <meta name="keywords" content="العاب, تحميل, مهداوي, GTA, PES, ألعاب مجانية, ألعاب كمبيوتر, wifi4games, games for pc , العاب مهداوي">
+    <meta name="keywords" content="العاب, تحميل, مهداوي, GTA, PES, ألعاب مجانية, ألعاب كمبيوتر, wifi4games, games for pc , meh1212mmll">
     <meta name="author" content="Abdelmouiz Mehdaoui">
     <link rel="canonical" href="https://achrafmeh.github.io/games/" />
     <link rel="stylesheet" href="style.css">
@@ -129,19 +129,32 @@ footer a:hover {
   </div>
   <button id="login-btn" class="login-btn" onclick="signInWithGoogle()">تسجيل الدخول</button>
 </header>
+<div id="search-box" style="text-align:center; margin: 20px;">
+  <input 
+    type="text" 
+    id="search-input" 
+    placeholder="🔍 ابحث عن لعبة..." 
+    style="padding: 12px; width: 60%; max-width: 400px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc;"
+  >
+  <button 
+    onclick="clearSearch()" 
+    style="padding: 12px; font-size: 16px; margin-right: 10px; border-radius: 8px; background-color: #e74c3c; color: white; border: none; cursor: pointer;">
+    ❌ مسح
+  </button>
+</div>
+
 <a id="up"></a>
     <nav>
         <ul class="nav">
             <li><a href="#gta games">Gta Games</a></li>
             <li><a href="#race games">Race Games</a></li>
             <li><a href="#Action games">Action Games</a></li>
-            <li><a href="#Intelligence games">Adventure games</a></li>
+            <li><a href="#Intelligence games">Intelligence games</a></li>
             <li><a href="#sports">Sports Games</a></li>
             <li><a href="#dd">ps5</a></li>
         </ul>
     </nav>
 
-    <h1 id="gta games">GTA GAMES</h1>
 
     <div class="gtd">
         <a href="pages/gtav.html">
@@ -187,7 +200,6 @@ footer a:hover {
     </section>        
         </a>
     </div>
-    <H1 id="race games">RACE GAMES</H1>
     <div class="gtd">
         <a href="https://www.downloadcomputergames.net/2020/07/download-blur-game.html">
     <section>
@@ -219,20 +231,7 @@ footer a:hover {
         <p>project cars 2</p>
     </section>        
         </a>
-        <a href="https://www.wifi4games.com/pc_games/Farming_Simulator_25.html">
-    <section>
-         <img src="https://www.wifi4games.com/img/pc_covers/260/DvsscxIEtY758.jpg"  alt="Farming Simulator 25">
-         <p>Farming Simulator 25</p>
-    </section>
-        </a>
-        <a href="https://www.wifi4games.com/pc_games/Motel_Manager_Simulator.html">
-    <section>
-         <img src="https://www.wifi4games.com/img/pc_covers/260/DUwBGRZ2yX755.jpg" alt="Motel Manager Simulator">
-         <p>Motel Manager Simulator</p>
-    </section>
-        </a>
     </div>
-    <H1 id="Action games">Action Games</H1>
     <div class="gtd">
         <a href="https://www.downloadcomputergames.net/2021/07/god-of-war-2-pc.html">
     <section>
@@ -294,20 +293,7 @@ footer a:hover {
         <p>R.E.P.O</p>
     </section>   
         </a>
-        <a href="https://www.wifi4games.com/pc_games/Return_to_Castle_Wolfenstein.html">
-     <section>
-        <img src="https://www.wifi4games.com/img/pc_covers/260/k61FQ987oX127.jpg" alt="Return to Castle Wolfenstein">
-        <p>Return to Castle Wolfenstein</p>
-     </section>
-        </a>
-         <a href="https://www.wifi4games.com/pc_games/Space_Engineers_Warfare_2.html">
-     <section>
-          <img src="https://www.wifi4games.com/img/pc_covers/260/fIpd3zVmB7382.jpg"   alt="Space Engineers Warfare 2">
-          <p>Space Engineers Warfare 2</p>
-     </section>
-         </a>
     </div>
-    <h1 id="Intelligence games">Adventure games</h1>
     <div class="gtd">
         <a href="https://www.downloadcomputergames.net/2020/08/win-million.html">
     <section>
@@ -346,7 +332,6 @@ footer a:hover {
     </section>
         </a>
     </div>
-    <h1 id="sports">Sports Games</h1>
     <div class="gtd">
         <a href="https://www.wifi4games.com/pc_games/fifa_2016.html">
     <section>
@@ -421,8 +406,8 @@ footer a:hover {
   <p>© 2025 Mehdaoui Games | جميع الحقوق محفوظة.</p>
   <p>
     <a href="privacy.html">سياسة الخصوصية</a> |
-    <a href="mailto:kadermehdaoui179@gmail.com">اتصل بنا</a> |
-    <a href="https://facebook.com/Mehdaoui Abdelmouiz" target="_blank">فيسبوك</a>
+    <a href="mailto:mehdaoui.contact@gmail.com">اتصل بنا</a> |
+    <a href="https://facebook.com/achrafmeh" target="_blank">فيسبوك</a>
   </p>
 </footer>
 
@@ -555,15 +540,6 @@ footer a:hover {
 });
 
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Mehdaoui Games",
-  "url": "https://achrafmeh.github.io/games/",
-  "logo": "https://achrafmeh.github.io/games/image.png"
-}
-</script>
 
 <script>
   const stars = document.querySelectorAll(".stars-container .star");
@@ -669,6 +645,34 @@ footer a:hover {
   });
 </script>
 
+<script>
+  const searchInput = document.getElementById("search-input");
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLowerCase();
+    const games = document.querySelectorAll(".gtd a");
+
+    games.forEach(link => {
+      const gameName = link.innerText.toLowerCase();
+      const imgAlt = link.querySelector("img")?.alt?.toLowerCase() || "";
+
+      // شرط المطابقة الجزئية
+      if (gameName.includes(query) || imgAlt.includes(query)) {
+        link.style.display = "inline-block";
+      } else {
+        link.style.display = "none";
+      }
+    });
+  });
+
+  function clearSearch() {
+    searchInput.value = "";
+    const games = document.querySelectorAll(".gtd a");
+    games.forEach(link => {
+      link.style.display = "inline-block";
+    });
+  }
+</script>
 
 </body>
 </html>

@@ -129,6 +129,7 @@ footer a:hover {
   </div>
   <button id="login-btn" class="login-btn" onclick="signInWithGoogle()">تسجيل الدخول</button>
 </header>
+
 <div id="search-box" style="text-align:center; margin: 20px;">
   <input 
     type="text" 
@@ -144,17 +145,16 @@ footer a:hover {
 </div>
 
 <a id="up"></a>
-    <nav>
-        <ul class="nav">
-            <li><a href="#gta games">Gta Games</a></li>
-            <li><a href="#race games">Race Games</a></li>
-            <li><a href="#Action games">Action Games</a></li>
-            <li><a href="#Intelligence games">Intelligence games</a></li>
-            <li><a href="#sports">Sports Games</a></li>
-            <li><a href="#dd">ps5</a></li>
-        </ul>
-    </nav>
-
+    <nav class="main-nav">
+  <ul>
+    <li><a href="#" onclick="filterGames('gta')">🎮 GTA</a></li>
+    <li><a href="#" onclick="filterGames('blur')">🏎️ سباق</a></li>
+    <li><a href="#" onclick="filterGames('batman')">💥 أكشن</a></li>
+    <li><a href="#" onclick="filterGames('ذكاء')">🧠 ذكاء</a></li>
+    <li><a href="#" onclick="filterGames('fifa')">⚽ رياضة</a></li>
+    <li><a href="#" onclick="filterGames('ps5')">🎮 PS5</a></li>
+  </ul>
+</nav>
 
     <div class="gtd">
         <a href="pages/gtav.html">
@@ -199,8 +199,8 @@ footer a:hover {
         <p>Bank Simulator</p>
     </section>        
         </a>
-    </div>
-    <div class="gtd">
+    
+    
         <a href="https://www.downloadcomputergames.net/2020/07/download-blur-game.html">
     <section>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwrDIY0cz3mg61DtxeItS28-3LYXoSeLNk8A&s" alt="blur">
@@ -231,8 +231,8 @@ footer a:hover {
         <p>project cars 2</p>
     </section>        
         </a>
-    </div>
-    <div class="gtd">
+    
+    
         <a href="https://www.downloadcomputergames.net/2021/07/god-of-war-2-pc.html">
     <section>
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqrx4cyq1Da-6dtNogVmgv4_sj6Sxs5TM0MeyU1YDuijIYSzjTLVi9u6y4RRVeSXutOVAEO-Vb2yUNVqiSK2qQGKNSEoeUvRafiKb8n829cNg4tfD0kxr5c6qWpx7xe62BffgRW0H3CQ/s16000-e365-rw/God-of-War-2.jpg" alt="good of God-of-War-2">
@@ -293,8 +293,7 @@ footer a:hover {
         <p>R.E.P.O</p>
     </section>   
         </a>
-    </div>
-    <div class="gtd">
+    
         <a href="https://www.downloadcomputergames.net/2020/08/win-million.html">
     <section>
         <img src="https://ingez-ppt.com/wp-content/uploads/2024/05/%D9%84%D8%B9%D8%A8%D8%A9-%D9%85%D9%86-%D8%B3%D9%8A%D8%B1%D8%A8%D8%AD-%D8%A7%D9%84%D9%85%D9%84%D9%8A%D9%88%D9%86-1.jpg" alt="من سيربح المليون">
@@ -331,8 +330,7 @@ footer a:hover {
           <p>ARK: Survival Evolvedv</p>
     </section>
         </a>
-    </div>
-    <div class="gtd">
+    
         <a href="https://www.wifi4games.com/pc_games/fifa_2016.html">
     <section>
         <img src="https://www.wifi4games.com/img/pc_covers/260/JU8Tnvnsar388.jpg" alt="FIFA 16">
@@ -670,6 +668,23 @@ footer a:hover {
     const games = document.querySelectorAll(".gtd a");
     games.forEach(link => {
       link.style.display = "inline-block";
+    });
+  }
+</script>
+<script>
+  function filterGames(keyword) {
+    const games = document.querySelectorAll(".gtd a");
+    keyword = keyword.toLowerCase();
+    document.getElementById("search-input").value = keyword;
+
+    games.forEach(link => {
+      const gameName = link.innerText.toLowerCase();
+      const imgAlt = link.querySelector("img")?.alt?.toLowerCase() || "";
+      if (gameName.includes(keyword) || imgAlt.includes(keyword)) {
+        link.style.display = "inline-block";
+      } else {
+        link.style.display = "none";
+      }
     });
   }
 </script>

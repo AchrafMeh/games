@@ -145,13 +145,17 @@ footer a:hover {
 </div>
 
 <a id="up"></a>
-    <nav class="main-nav">
-  <ul>
-    <li><a href="#" onclick="filterGames('gta')">🎮 GTA</a></li>
-    <li><a href="#" onclick="filterGames('blur')">🏎️ سباق</a></li>
-    <li><a href="#" onclick="filterGames('batman')">💥 أكشن</a></li>
+    <nav class="responsive-nav">
+  <div class="nav-header">
+    <span class="nav-title">📂 التصنيفات</span>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+  <ul id="nav-menu">
+    <li><a href="#" onclick="filterGames('gta')">🚔 GTA</a></li>
+    <li><a href="#" onclick="filterGames('blur')">🚗 سباق</a></li>
+    <li><a href="#" onclick="filterGames('batman')">🔫 أكشن</a></li>
     <li><a href="#" onclick="filterGames('ذكاء')">🧠 ذكاء</a></li>
-    <li><a href="#" onclick="filterGames('fifa')">⚽ رياضة</a></li>
+    <li><a href="#" onclick="filterGames('fifa')">⚽️ رياضة</a></li>
     <li><a href="#" onclick="filterGames('ps5')">🎮 PS5</a></li>
   </ul>
 </nav>
@@ -688,6 +692,22 @@ footer a:hover {
     });
   }
 </script>
+<script>
+  function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("active");
+  }
 
+  function filterGames(category) {
+    const games = document.querySelectorAll(".gtd a");
+    games.forEach(link => {
+      const name = link.innerText.toLowerCase();
+      if (name.includes(category.toLowerCase())) {
+        link.style.display = "inline-block";
+      } else {
+        link.style.display = "none";
+      }
+    });
+  }
+</script>
 </body>
 </html>

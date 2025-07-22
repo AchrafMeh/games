@@ -2,182 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://achrafmeh.github.io/games/</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://achrafmeh.github.io/games/pages/gtav.html</loc>
-    <lastmod>2025-05-18</lastmod>
+    <lastmod>2025-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://achrafmeh.github.io/games/pages/gtasa.html</loc>
-    <lastmod>2025-05-19</lastmod>
+    <lastmod>2025-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.downloadcomputergames.net/2020/09/download-gta-san-andreas.html</loc>
-    <lastmod>2025-05-18</lastmod>
+    <loc>https://achrafmeh.github.io/games/pages/gtaiii.html</loc>
+    <lastmod>2025-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.downloadcomputergames.net/2021/02/download-gta-3.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2020/09/grand-theft-auto-iv.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2021/02/download-gta-vice-city.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2020/09/download-gta-egypt-for-pc.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2020/07/download-blur-game.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2025/05/carx-street.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/OVERPASS.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Drift_Zone.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/project_cars_2.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2021/07/god-of-war-2-pc.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2020/11/batman-for-pc.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Commandos:_Origins.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Ghost_of_Tsushima_DIRECTOR'S_CUT.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Assassin's_Creed_Mirage.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2020/11/wwe-for-pc.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Dragon_Ball_Xenoverse_2.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Sniper_Art_of_Victory.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.downloadcomputergames.net/2020/08/win-million.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Poly_Bridge.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Portal.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/UNRAVEL_TWO.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/fifa_2016.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/FIFA_2019.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Pro_Evolution_Soccer_2015.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/Fifa_2014.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.wifi4games.com/pc_games/eFootball_PES_2021.html</loc>
-    <lastmod>2025-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://achrafmeh.github.io/games/privacy.html</loc>
+    <lastmod>2025-07-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

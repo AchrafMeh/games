@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://achrafmeh.github.io/games/sitemap.xml
+Sitemap: https://mehdaouigames.netlify.app/sitemap.xml

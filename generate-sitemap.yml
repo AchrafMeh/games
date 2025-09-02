@@ -19,7 +19,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1.10.1
         with:
           sitemap-filename: sitemap.xml
-          base-url: https://achrafmeh.github.io/games
+          base-url: https://mehdaouigames.netlify.app/
 
       - name: Commit and push sitemap
         run: |

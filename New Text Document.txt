@@ -1,1 +1,33 @@
   background: linear-gradient(to right, rgb(255, 70, 70), hsl(229, 100%, 67%));
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Mehdaoui Games",
+  "url": "https://mehdaouigames.netlify.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mehdaouigames.netlify.app#q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "ألعاب Mehdaoui Games",
+  "image": "https://mehdaouigames.netlify.app/image.png",
+  "description": "أفضل ألعاب الكمبيوتر المجانية للعب أونلاين أو تحميلها مباشرة من موقع Mehdaoui Games.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Mehdaoui Games"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "126"
+  }
+}
+</script>

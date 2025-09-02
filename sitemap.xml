@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://achrafmeh.github.io/games/</loc>
-    <lastmod>2025-07-22</lastmod>
+    <loc>https://mehdaouigames.netlify.app/</loc>
+    <lastmod>2025-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://achrafmeh.github.io/games/pages/gtav.html</loc>
-    <lastmod>2025-07-22</lastmod>
+    <loc>https://mehdaouigames.netlify.app/pages/gtav.html</loc>
+    <lastmod>2025-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://achrafmeh.github.io/games/pages/gtasa.html</loc>
-    <lastmod>2025-07-22</lastmod>
+    <loc>https://mehdaouigames.netlify.app/pages/gtasa.html</loc>
+    <lastmod>2025-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://achrafmeh.github.io/games/pages/gtaiii.html</loc>
-    <lastmod>2025-07-22</lastmod>
+    <loc>https://mehdaouigames.netlify.app/pages/gtaiii.html</loc>
+    <lastmod>2025-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://achrafmeh.github.io/games/privacy.html</loc>
-    <lastmod>2025-07-22</lastmod>
+    <loc>https://mehdaouigames.netlify.app/privacy.html</loc>
+    <lastmod>2025-07-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
